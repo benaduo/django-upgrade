@@ -102,6 +102,27 @@ For example:
      class Example3Tests(TestCase):
          ...
 
+Django 7.0
+----------
+
+`Release Notes <https://docs.djangoproject.com/en/7.0/releases/7.0/>`__
+
+.. _settings_signed_cookie_legacy_salt_fallback:
+
+``SIGNED_COOKIE_LEGACY_SALT_FALLBACK`` setting
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+**Name:** ``settings_signed_cookie_legacy_salt_fallback``
+
+Removes the transitional setting ``SIGNED_COOKIE_LEGACY_SALT_FALLBACK`` from settings files, as it no longer has any effect.
+
+Settings files are heuristically detected as modules with the whole word "settings" somewhere in their path.
+For example ``myproject/settings.py`` or ``myproject/settings/production.py``.
+
+.. code-block:: diff
+
+    -SIGNED_COOKIE_LEGACY_SALT_FALLBACK = True
+
 Django 6.0
 ----------
 
